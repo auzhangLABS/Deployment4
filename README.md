@@ -38,8 +38,7 @@ Put photo 1 here
 
 #### Installing Monitoring tool onto EC2
 To install Cloudwatch, we had to make sure that we had created an IAM role that allows us to use CloudWatch agent on Amazon EC2. Here, I'm showing how to use the command line to install the CloudWatch agent on Amazon EC2.
-- `wget 	
-https://amazoncloudwatch-agent.s3.amazonaws.com/ubuntu/amd64/latest/amazon-cloudwatch-agent.deb`: To download the Cloudwatch agent for the Ubuntu platform. <br>
+- `wget https://amazoncloudwatch-agent.s3.amazonaws.com/ubuntu/amd64/latest/amazon-cloudwatch-agent.deb`: To download the Cloudwatch agent for the Ubuntu platform. <br>
 - `sudo dpkg -i -E ./amazon-cloudwatch-agent.deb`: To install CloudWatch agent from the Debian Package. <br>
 
 
