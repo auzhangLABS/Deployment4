@@ -36,7 +36,11 @@ To see the steps to install Jenkins, Python Virtual Environment, or Python packa
 Once, we downloaded NGINX, we configured our configuration found at this path: `/etc/nginx/sites-enabled/default` to change the port from 80 to 5000 as well as, changing the location block that handles requests to the root location. <br>
 Put photo 1 here
 
-#### Installing
+#### Installing Monitoring tool onto EC2
+To install Cloudwatch, we had to make sure that we had created an IAM role that allows us to use CloudWatch agent on Amazon EC2. Here, I'm showing how to use the command line to install the CloudWatch agent on Amazon EC2.
+- `wget 	
+https://amazoncloudwatch-agent.s3.amazonaws.com/ubuntu/amd64/latest/amazon-cloudwatch-agent.deb`: To download the Cloudwatch agent for the Ubuntu platform. <br>
+- `sudo dpkg -i -E ./amazon-cloudwatch-agent.deb`: To install CloudWatch agent from the Debian Package. <br>
 
 
 
