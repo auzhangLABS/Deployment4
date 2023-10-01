@@ -3,7 +3,7 @@
 ## Purpose:
 The purpose of deployment 4 was to set up a monitoring solution for the Amazon EC2 instance running our application. The primary objective was to continuously monitor real-time metrics of our EC2 instance, which may include CPU, memory, or RAM. This allows us to detect issues early while optimizing EC2 resources, as well as increasing the reliability of our application. Additionally, we configured a notification system that would allow us to be alert of any critical performance issues with our application with the EC2. This deployment motivates us to proactively address server-related issues ensuring a resilient application.
 
-## Step:
+## Steps:
 Before we started, we created our VPC with two available zones. Within each of those available zones, we have one public subnet and one private subnet (2 AZ, 2 public subnet, 2 private subnet). We're also using a t2.medium EC2 instance within the public subnet of AZ A. This EC2 instance will also have a security attached to it To see the VPC diagram, click [here!]( )
 #### Replicating an online repository into our repository.
 - `git clone {online repo url}`: Cloning an online repository into our local workspace. <br>
