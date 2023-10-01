@@ -30,7 +30,7 @@ To see the updated Jenkinsfile click [here!]( )
 #### Download Jenkins and other additional Packages
 - `sudo apt-get update`: Update the repository information. <br>
 To see the steps to install Jenkins, Python Virtual Environment, or Python package manager and installer, click [here!]( ) <br>
-- `sudo apt-get install nginx`: Install the NGINX package. <br.
+- `sudo apt-get install nginx`: Install the NGINX package. <br>
 - `sudo nginx -v`: To verify the installation. <br>
 
 Once, we downloaded NGINX, we configured our configuration found at this path: `/etc/nginx/sites-enabled/default` to change the port from 80 to 5000 as well as, changing the location block that handles requests to the root location. <br>
@@ -40,9 +40,13 @@ Put photo 1 here
 To install Cloudwatch, we had to make sure that we had created an IAM role that allows us to use CloudWatch agent on Amazon EC2. Here, I'm showing how to use the command line to install the CloudWatch agent on Amazon EC2.
 - `wget https://amazoncloudwatch-agent.s3.amazonaws.com/ubuntu/amd64/latest/amazon-cloudwatch-agent.deb`: To download the Cloudwatch agent for the Ubuntu platform. <br>
 - `sudo dpkg -i -E ./amazon-cloudwatch-agent.deb`: To install CloudWatch agent from the Debian Package. <br>
+- `sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-config-wizard`: Launch a CloudWatch Agent using the configuration wizard. <br>
+- `cat file_config.json`: To see what you have configured. You must be within `/opt/aws/amazon-cloudwatch-agent/etc/amazon-cloudwatch-agent.d/` folder. <br>
 
+Here is what I configured for CloudWatch, see [here!]( ). Once you finish configuring it will show up in meters within CloudWatch.
 
-
+#### Running on Jenkins and server performance
+For this deployment, we're creating a Multibranch Pipeline project. This allows Jenkins to create a set of Pipeline projects according to the branches in the repository. From examining the CloudWatch metrics on this EC2 instance, I was able to tell that the T2.medium was able to handle everything installed on it. Additionally, the CPU would increase once we were running another build. 
 
 
 
