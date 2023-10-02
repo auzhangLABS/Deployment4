@@ -53,6 +53,9 @@ To set up a Cloudwatch alarm, we go into Alarms and create an alarm. Next, you c
 For this example, I choose to set up an Alaram that will trigger if one of my CPU usage goes over 75% (keep in mind, T2.medium has 2 CPUs). <br>
 ![image](https://github.com/auzhangLABS/Deployment4/assets/138344000/09cd2346-8134-4b3c-ba49-2b2e30a593b2)
 
+#### Configure email notifications on Jenkins
+To set email notifications on Jenkins
+
 
 ## System Design Diagram
 To view the System Design Diagram, click [here!](https://github.com/auzhangLABS/Deployment4/blob/main/images/d4.drawio.png)
