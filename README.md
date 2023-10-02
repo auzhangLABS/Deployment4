@@ -4,7 +4,7 @@
 The purpose of deployment 4 was to set up a monitoring solution for the Amazon EC2 instance running our application. The primary objective was to continuously monitor real-time metrics of our EC2 instance, which may include CPU, memory, or RAM. This allows us to detect issues early while optimizing EC2 resources, as well as increasing the reliability of our application. Additionally, we configured a notification system that would allow us to be alert of any critical performance issues with our application with the EC2. This deployment motivates us to proactively address server-related issues ensuring a resilient application.
 
 ## Steps:
-Before we started, we created our VPC with two available zones. Within each of those available zones, we have one public subnet and one private subnet (2 AZ, 2 public subnet, 2 private subnet). We're also using a t2.medium EC2 instance within the public subnet of AZ A. This EC2 instance will also have a security attached to it To see the VPC diagram, click [here!]( )
+Before we started, we created our VPC with two available zones. Within each of those available zones, we have one public subnet and one private subnet (2 AZ, 2 public subnet, and 2 private subnet). We're also using a t2.medium EC2 instance within the public subnet of AZ A. This EC2 instance will also have a security attached to it To see the VPC diagram, click [here!]( )
 #### Replicating an online repository into our repository.
 - `git clone {online repo url}`: Cloning an online repository into our local workspace. <br>
 - `cd repo name`: Going into the repository folder. <br>
@@ -46,9 +46,16 @@ To install Cloudwatch, we had to make sure that we had created an IAM role that 
 Here is what I configured for CloudWatch, see [here!]( ). Once you finish configuring it will show up in meters within CloudWatch.
 
 #### Running on Jenkins and server performance
-For this deployment, we're creating a Multibranch Pipeline project. This allows Jenkins to create a set of Pipeline projects according to the branches in the repository. From examining the CloudWatch metrics on this EC2 instance, I was able to tell that the T2.medium was able to handle everything installed on it. Additionally, the CPU would increase once we were running another build. 
+For this deployment, we're creating a Multibranch Pipeline project. This allows Jenkins to create a set of Pipeline projects according to the branches in the repository. From examining the CloudWatch metrics on this EC2 instance, I was able to tell that the T2.medium was able to handle everything installed on it. Additionally, the CPU would increase once we're starting another build. For this application, we can also use T2.micro however it would perform much slower due to the fact the T2.micro has 1 vCPUs whereas the T2.medium has 2 vCPUs. Additionally, a T2.medium also comes with more memory (RAM) and better network performance for a higher price. 
+
+#### Setting Monitoring Alarms
+- To set up a Cloudwatch alarm, we go into Alarms and create an alarm. Next, you choose the metric you want to track and set the threshold, you want the alarm to trigger.
 
 
+## System Design Diagram
+To view the System Design Diagram, click [here!] (     )
+
+## Optimization:
 
 
 
