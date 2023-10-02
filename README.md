@@ -34,7 +34,7 @@ To see the steps to install Jenkins, Python Virtual Environment, or Python packa
 - `sudo nginx -v`: To verify the installation. <br>
 
 Once, we downloaded NGINX, we configured our configuration found at this path: `/etc/nginx/sites-enabled/default` to change the port from 80 to 5000 as well as, changing the location block that handles requests to the root location. <br>
-Put photo 1 here
+![image](https://github.com/auzhangLABS/Deployment4/assets/138344000/c5e78eae-ecf8-43c1-96b1-e86acbc4c746) <br>
 
 #### Installing Monitoring tool onto EC2
 To install Cloudwatch, we had to make sure that we had created an IAM role that allows us to use CloudWatch agent on Amazon EC2. Here, I'm showing how to use the command line to install the CloudWatch agent on Amazon EC2.
