@@ -49,7 +49,7 @@ pipeline {
         }
         }
 
-   ​​ ​​ ​​stage('Email Jenkins Pipeline') {
+   ​​ ​​ ​​stage ('Email Jenkins Pipeline') {
  ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​​​ steps {mail bcc: '', body: 'Hello, This is an email from jenkins pipeline.', cc: '', from: '', replyTo: '', subject:​​ 'EmailJenkinsPipeline', to: 'aubrey.zhang06@gmail.com'
  ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​​​ }
  ​​ ​​ ​​ ​​ ​​ ​​ ​​​​ } 
