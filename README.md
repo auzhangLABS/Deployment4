@@ -54,7 +54,15 @@ For this example, I choose to set up an Alaram that will trigger if one of my CP
 ![image](https://github.com/auzhangLABS/Deployment4/assets/138344000/09cd2346-8134-4b3c-ba49-2b2e30a593b2)
 
 #### Configure email notifications on Jenkins
-To set email notifications on Jenkins
+To set email notifications on Jenkins here are the steps I took: <br>
+1) Go into Manage Jenkins --> Configure systems <br>
+2) Scroll down to E-mail Notification. Here is what I put: <br>
+![image](https://github.com/auzhangLABS/Deployment4/assets/138344000/ed64328d-ffbb-415a-ad2c-60f9ad637e36) <br>
+For the password, I had to go into Google Password to generate an app password token. I then test the notification to make sure it works. <br>
+I set my Jenkins email notifications to email me when the Pipeline was completed and successful. I did this by adding an additional stage to the Jenkinsfile.
+![image](https://github.com/auzhangLABS/Deployment4/assets/138344000/608743a1-aec8-4e5b-836a-a9bb73083ecd) <br>
+However, you can set up Jenkins email. however, you want. 
+
 
 
 ## System Design Diagram
@@ -63,7 +71,8 @@ To view the System Design Diagram, click [here!](https://github.com/auzhangLABS/
 ## Issues/ Troubleshooting
 When working on this deployment, I encountered an issue when attempting to push my local repository to my remote Github repository. The console would prompt me to enter my credentials, but consistently I would receive an incorrect credential error. To address this, I double-check my username and token to ensure the accuracy of my credentials. After this, I was still receiving that error. Upon investigating, I soon figured out that I would need 
 to grant additional permission for my token that would allow full control of my repositories
-![image](https://github.com/auzhangLABS/Deployment4/assets/138344000/d8acc41c-d950-4f5a-8eb1-fc9abca37b0c)
+![image](https://github.com/auzhangLABS/Deployment4/assets/138344000/d8acc41c-d950-4f5a-8eb1-fc9abca37b0c) <br>
+Another issue I ran into was creating a CloudWatch agent on my instance. I fix this by modifying the IAM to allow the instance to create a CloudWatch agent. 
 
 
 ## Optimization:
