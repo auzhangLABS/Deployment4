@@ -43,7 +43,7 @@ To install Cloudwatch, we had to make sure that we had created an IAM role that 
 - `sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-config-wizard`: Launch a CloudWatch Agent using the configuration wizard. <br>
 - `cat file_config.json`: To see what you have configured. You must be within `/opt/aws/amazon-cloudwatch-agent/etc/amazon-cloudwatch-agent.d/` folder. <br>
 
-Here is what I configured for CloudWatch, see [here!]( ). Once you finish configuring it will show up in metrics within CloudWatch.
+Here is what I configured for CloudWatch, see [here!](https://github.com/auzhangLABS/Deployment4/blob/main/file_config.json). Once you finish configuring it will show up in metrics within CloudWatch.
 
 #### Running on Jenkins and server performance
 For this deployment, we're creating a Multibranch Pipeline project. This allows Jenkins to create a set of Pipeline projects according to the branches in the repository. From examining the CloudWatch metrics on this EC2 instance, I was able to tell that the T2.medium was able to handle everything installed on it. Additionally, the CPU would increase once we're starting another build. For this application, we can also use T2.micro however it would perform much slower due to the fact the T2.micro has 1 vCPUs whereas the T2.medium has 2 vCPUs. Additionally, a T2.medium also comes with more memory (RAM) and better network performance for a higher price. 
