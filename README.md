@@ -25,7 +25,7 @@ Keep in mind, once you push it will prompt you to enter your username and passwo
 - `git merge {branch name}`: Merging changes done on {branch name} onto main. <br>
 - `git push`: Pushing to our remote repository. <br>
 
-To see the updated Jenkinsfile click [here!]( )
+To see the updated Jenkinsfile click [here!](https://github.com/auzhangLABS/Deployment4/blob/main/Jenkinsfile)
 
 #### Download Jenkins and other additional Packages
 - `sudo apt-get update`: Update the repository information. <br>
