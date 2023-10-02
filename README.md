@@ -19,11 +19,11 @@ Keep in mind that once you push, it will prompt you to enter your username and p
 - `git branch {branch name}`: Creating a branch. <br>
 - `git switch {branch name}`: Change into that branch. <br>
 - `nano Jenkinsfile`: Changing the Jenkins file within the text editor. <br>
-- `git add Jenkinsfile`: adding Jenkins files to the stage area. <br>
-- `git commit -m "you commit message" `" committing the file with a commit message. <br>
+- `git add Jenkinsfile`: Adding Jenkins files to the stage area. <br>
+- `git commit -m "you commit message" `: Committing the file with a commit message. <br>
 - `git switch main`: Changing back to main. <br>
 - `git merge {branch name}`: Merging changes done on {branch name} onto main. <br>
-- `git push`: pushing to our remote repository. <br>
+- `git push`: Pushing to our remote repository. <br>
 
 To see the updated Jenkinsfile click [here!](https://github.com/auzhangLABS/Deployment4/blob/main/Jenkinsfile)
 
@@ -46,7 +46,7 @@ To install Cloudwatch, we had to make sure that we had created an IAM role that 
 Here is what I configured for CloudWatch; see [here!](https://github.com/auzhangLABS/Deployment4/blob/main/file_config.json). Once you finish configuring it, it will show up in metrics within CloudWatch.
 
 #### Running on Jenkins and server performance
-For this deployment, we're creating a multi-branch pipeline project. This allows Jenkins to create a set of pipeline projects according to the branches in the repository. From examining the CloudWatch metrics on this EC2 instance, I was able to tell that the T2.medium was able to handle everything installed on it. Additionally, the CPU will increase once we're starting another build. For this application, we can also use T2.micro; however, it would perform much slower due to the fact that T2.micro has 1 vCPU whereas T2.medium has 2 vCPUs. Additionally, a T2.medium also comes with more memory (RAM) and better network performance for a higher price.
+For this deployment, we're creating a multi-branch pipeline project. This allows Jenkins to create a set of pipeline projects according to the branches in the repository. From examining the CloudWatch metrics on this EC2 instance, I was able to tell that the T2.medium was able to handle everything installed on it. Additionally, the CPU will increase once we start another build. For this application, we can also use T2.micro; however, it would perform much slower due to the fact that T2.micro has 1 vCPU whereas T2.medium has 2 vCPUs. Additionally, a T2.medium also comes with more memory (RAM) and better network performance for a higher price.
 
 #### Setting Monitoring Alarms
 To set up a Cloudwatch alarm, we go into Alarms and create an alarm. Next, you choose the metric you want to track and set the threshold, you want the alarm to trigger. <br>
@@ -61,9 +61,7 @@ To set email notifications on Jenkins, here are the steps I took:
 For the password, I had to go into Google Password to generate an app password token. I then test the notification to make sure it works. <br>
 I set my Jenkins email notifications to email me when the pipeline was completed and successful. I did this by adding an additional stage to the Jenkinsfile.
 ![image](https://github.com/auzhangLABS/Deployment4/assets/138344000/608743a1-aec8-4e5b-836a-a9bb73083ecd) <br>
-However, you can set up a Jenkins email. however you want.
-
-
+However, you can set up a Jenkins email. however, you want.
 
 
 ## System Design Diagram
