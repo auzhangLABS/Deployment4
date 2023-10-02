@@ -49,17 +49,22 @@ Here is what I configured for CloudWatch, see [here!](https://github.com/auzhang
 For this deployment, we're creating a Multibranch Pipeline project. This allows Jenkins to create a set of Pipeline projects according to the branches in the repository. From examining the CloudWatch metrics on this EC2 instance, I was able to tell that the T2.medium was able to handle everything installed on it. Additionally, the CPU would increase once we're starting another build. For this application, we can also use T2.micro however it would perform much slower due to the fact the T2.micro has 1 vCPUs whereas the T2.medium has 2 vCPUs. Additionally, a T2.medium also comes with more memory (RAM) and better network performance for a higher price. 
 
 #### Setting Monitoring Alarms
-- To set up a Cloudwatch alarm, we go into Alarms and create an alarm. Next, you choose the metric you want to track and set the threshold, you want the alarm to trigger.
-Put 1 photo here:
+To set up a Cloudwatch alarm, we go into Alarms and create an alarm. Next, you choose the metric you want to track and set the threshold, you want the alarm to trigger. <br>
+For this example, I choose to set up an Alaram that will trigger if one of my CPU usage goes over 75% (keep in mind, T2.medium has 2 CPUs). <br>
+![image](https://github.com/auzhangLABS/Deployment4/assets/138344000/09cd2346-8134-4b3c-ba49-2b2e30a593b2)
+
 
 ## System Design Diagram
 To view the System Design Diagram, click [here!] (     )
 
 ## Issues/ Troubleshooting
+When working on this deployment, I encountered an issue when attempting to push my local repository to my remote Github repository. The console would prompt me to enter my credentials, but consistently I would receive an incorrect credential error. To address this, I double-check my username and token to ensure the accuracy of my credentials. After this, I was still receiving that error. Upon investigating, I soon figured out that I would need 
+to grant additional permission for my token that would allow full control of my repositories
+![image](https://github.com/auzhangLABS/Deployment4/assets/138344000/d8acc41c-d950-4f5a-8eb1-fc9abca37b0c)
+
 
 ## Optimization:
-
-
+I would try to optimize this deployment by implementing CloudWatch to trigger an Auto Scaling group. This would allow automatic EC2 scaling depending on the usage of the instance. 
 
 
 
