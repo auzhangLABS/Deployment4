@@ -48,5 +48,9 @@ python3 -m gunicorn -w 4 application:app -b 0.0.0.0 --daemon
 }
 }
 }
+
+stage('Email Jenkins Pipeline') {
+steps {
+mail bcc: '', body: 'Hello, This is an email to let you know that the pipeline was successful', cc: '', from: '', replyTo: '', subject:​​ 'Jenkins Pipeline', to: 'aubrey.zhang06@gmail.com'
 }
 }
