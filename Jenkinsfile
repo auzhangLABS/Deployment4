@@ -49,7 +49,9 @@ pipeline {
         }
         }
 
-
+    stage ('email'){
+      steps{mail bcc: '', body: 'Hello, this is email from Jenkins pipeline', cc: '', from: '', replyTo: '', subject: 'JenkinsSuccess', to: 'aubrey.zhang06@gmail.com'}
+           }
   
   }
 }
