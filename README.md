@@ -7,11 +7,11 @@ The purpose of deployment 4 was to set up a monitoring solution for the Amazon E
 Before we started, we created our VPC with two available zones. Within each of those available zones, we have one public subnet and one private subnet (2 AZ, 2 public subnets, and 2 private subnets). We're also using a t2.medium EC2 instance within the public subnet of AZ A. This EC2 instance will also have a security group attached to it. To see the VPC diagram, click [here!](https://github.com/auzhangLABS/Deployment4/blob/main/images/vpcdiagram.drawio.png)
 #### Replicating an online repository into our repository
 - `git clone {online repo url}`: Cloning an online repository into our local workspace. <br>
-- `cd repo name`: going into the repository folder. <br>
-- `cd .git`: going into the .git folder. <br>
+- `cd repo name`: Going into the repository folder. <br>
+- `cd .git`: Going into the .git folder. <br>
 - `nano config`: Here we are going to change the config file to push this repo to our remote repository by changing the `[remote = "origin"] url = {our remote repo url}`. <br>
 - `git config --global user.name "Your Name"` `git config --global user.email "Your email"`: This allows us to set the global variable to your name and email.
-- `git push`: pushing it to our remote repository. <br>
+- `git push`: Pushing it to our remote repository. <br>
 
 Keep in mind that once you push, it will prompt you to enter your username and password (token) for your GitHub.
 
