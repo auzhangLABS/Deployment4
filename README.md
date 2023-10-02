@@ -1,4 +1,4 @@
-# Deployment 4 Docmentation
+# Deployment 4 Documentation
 
 ## Purpose:
 The purpose of deployment 4 was to set up a monitoring solution for the Amazon EC2 instance running our application. The primary objective was to continuously monitor real-time metrics of our EC2 instance, which may include CPU, memory, or RAM. This allows us to detect issues early while optimizing EC2 resources, as well as increasing the reliability of our application. Additionally, we configured a notification system that would allow us to be alert of any critical performance issues with our application with the EC2. This deployment motivates us to proactively address server-related issues ensuring a resilient application.
