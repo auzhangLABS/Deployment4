@@ -55,7 +55,7 @@ For this example, I choose to set up an Alaram that will trigger if one of my CP
 
 
 ## System Design Diagram
-To view the System Design Diagram, click [here!] (https://github.com/auzhangLABS/Deployment4/blob/main/images/d4.drawio.png)
+To view the System Design Diagram, click [here!](https://github.com/auzhangLABS/Deployment4/blob/main/images/d4.drawio.png)
 
 ## Issues/ Troubleshooting
 When working on this deployment, I encountered an issue when attempting to push my local repository to my remote Github repository. The console would prompt me to enter my credentials, but consistently I would receive an incorrect credential error. To address this, I double-check my username and token to ensure the accuracy of my credentials. After this, I was still receiving that error. Upon investigating, I soon figured out that I would need 
