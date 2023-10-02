@@ -50,10 +50,12 @@ For this deployment, we're creating a Multibranch Pipeline project. This allows 
 
 #### Setting Monitoring Alarms
 - To set up a Cloudwatch alarm, we go into Alarms and create an alarm. Next, you choose the metric you want to track and set the threshold, you want the alarm to trigger.
-
+Put 1 photo here:
 
 ## System Design Diagram
 To view the System Design Diagram, click [here!] (     )
+
+## Issues/ Troubleshooting
 
 ## Optimization:
 
