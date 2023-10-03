@@ -49,8 +49,8 @@ To see what I configured for CloudWatch, click [here!](https://github.com/auzhan
 For this deployment, we're creating a multi-branch pipeline project. This allows Jenkins to create a set of pipeline projects according to the branches in the repository. From examining the CloudWatch metrics on this EC2 instance, I was able to tell that the T2.medium was able to handle everything installed on it. Additionally, the CPU will increase once we start another build. For this application, we can also use T2.micro; however, it would perform much slower due to the fact that T2.micro has 1 vCPU whereas T2.medium has 2 vCPUs. Additionally, a T2.medium also comes with more memory (RAM) and better network performance for a higher price.
 
 #### Setting Monitoring Alarms
-To set up a Cloudwatch alarm, we go into Alarms and create an alarm. Next, you choose the metric you want to track and set the threshold, you want the alarm to trigger. <br>
-For this example, I choose to set up an Alarm that will trigger if one of my CPU usage goes over 75% (keep in mind, T2.medium has 2 CPUs). <br>
+To set up a Cloudwatch alarm, we go into Alarms and create an alarm. Next, you choose the metric you want to track and set the threshold you want the alarm to trigger. <br>
+For this example, I choose to set up an alarm that will trigger if one of my CPU usage goes over 75% (keep in mind, T2.medium has 2 CPUs). <br>
 ![image](https://github.com/auzhangLABS/Deployment4/assets/138344000/09cd2346-8134-4b3c-ba49-2b2e30a593b2)
 
 #### Configure email notifications on Jenkins
@@ -61,7 +61,7 @@ To set email notifications on Jenkins, here are the steps I took:
 For the password, I had to go into Google Password to generate an app password token. I then test the notification to make sure it works. <br>
 I set my Jenkins email notifications to email me when the pipeline was completed and successful. I did this by adding an additional stage to the Jenkinsfile.
 ![image](https://github.com/auzhangLABS/Deployment4/assets/138344000/608743a1-aec8-4e5b-836a-a9bb73083ecd) <br>
-However, you can set up a Jenkins email. however, you want.
+However, you can set up a Jenkins email however you want.
 
 
 ## System Design Diagram
@@ -76,6 +76,15 @@ Another issue I ran into was creating a CloudWatch agent on my instance. I fixed
 
 ## Optimization:
 I would try to optimize this deployment by implementing CloudWatch to trigger an auto-scaling group. This would allow automatic EC2 scaling, depending on the usage of the instance.
+
+
+
+
+
+
+
+
+
 
 
 
