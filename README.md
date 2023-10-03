@@ -29,6 +29,7 @@ To see the updated Jenkinsfile click [here!](https://github.com/auzhangLABS/Depl
 
 #### Download Jenkins and other additional packages.
 - `sudo apt-get update`: Update the repository information. <br>
+We are also installing a Pipeline Keep Running Step plugin for Jenkins, this would allow the process to keep running even after the Jenkins build has finished.
 To see the steps to install Jenkins, Python Virtual Environment, or Python package manager and installer, click [here!](https://github.com/auzhangLABS/c4_deployment3) <br>
 - `sudo apt-get install nginx`: Install the NGINX package. <br>
 - `sudo nginx -v`: To verify the installation. <br>
