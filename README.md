@@ -43,14 +43,14 @@ To install Cloudwatch, we had to make sure that we had created an IAM role that 
 - `sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-config-wizard`: Launch a CloudWatch agent using the configuration wizard. <br>
 - `cat file_config.json`: To see what you have configured. You must be within the `/opt/aws/amazon-cloudwatch-agent/etc/amazon-cloudwatch-agent.d/` folder. <br>
 
-Here is what I configured for CloudWatch; see [here!](https://github.com/auzhangLABS/Deployment4/blob/main/file_config.json). Once you finish configuring it, it will show up in metrics within CloudWatch.
+To see what I configured for CloudWatch, click [here!](https://github.com/auzhangLABS/Deployment4/blob/main/file_config.json). Once you finish configuring it, it will show up in metrics within CloudWatch.
 
 #### Running on Jenkins and server performance
 For this deployment, we're creating a multi-branch pipeline project. This allows Jenkins to create a set of pipeline projects according to the branches in the repository. From examining the CloudWatch metrics on this EC2 instance, I was able to tell that the T2.medium was able to handle everything installed on it. Additionally, the CPU will increase once we start another build. For this application, we can also use T2.micro; however, it would perform much slower due to the fact that T2.micro has 1 vCPU whereas T2.medium has 2 vCPUs. Additionally, a T2.medium also comes with more memory (RAM) and better network performance for a higher price.
 
 #### Setting Monitoring Alarms
 To set up a Cloudwatch alarm, we go into Alarms and create an alarm. Next, you choose the metric you want to track and set the threshold, you want the alarm to trigger. <br>
-For this example, I choose to set up an Alaram that will trigger if one of my CPU usage goes over 75% (keep in mind, T2.medium has 2 CPUs). <br>
+For this example, I choose to set up an Alarm that will trigger if one of my CPU usage goes over 75% (keep in mind, T2.medium has 2 CPUs). <br>
 ![image](https://github.com/auzhangLABS/Deployment4/assets/138344000/09cd2346-8134-4b3c-ba49-2b2e30a593b2)
 
 #### Configure email notifications on Jenkins
