@@ -37,6 +37,8 @@ To see the steps to install Jenkins, Python Virtual Environment, or Python packa
 Once we downloaded NGINX, we configured our configuration found at this path: `/etc/nginx/sites-enabled/default` to change the port from 80 to 5000 as well as the location block that handles requests to the root location. <br>
 ![image](https://github.com/auzhangLABS/Deployment4/assets/138344000/c5e78eae-ecf8-43c1-96b1-e86acbc4c746) <br>
 
+Remember that Nginx will be the presentation layer while Gunicorn will be more at the application layer. Nginx would act as a reverse proxy for Gunicorn (route requests). 
+
 #### Installing the monitoring tool onto EC2
 To install Cloudwatch, we had to make sure that we had created an IAM role that allowed us to use the CloudWatch agent on Amazon EC2. Here, I'm showing how to use the command line to install the CloudWatch agent on Amazon EC2.
 - `wget https://amazoncloudwatch-agent.s3.amazonaws.com/ubuntu/amd64/latest/amazon-cloudwatch-agent.deb`: To download the Cloudwatch agent for the Ubuntu platform. <br>
